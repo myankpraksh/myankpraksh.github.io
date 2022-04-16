@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "PT Mono";
+  src: url(assets/PTMono-Regular.ttf);
+}
+:root {
+  --background_color: #f0f0f0;
+  --secondary_background_color: #191919;
+  --nav_back: #333;
+  --main_color: black;
+  /* --button_clicked_color : #93f071; */
+  --button_clicked_color: #f07171;
+  /* --button_clicked_color : #71b7f0; */
+  /* --button_clicked_color : #b971f0; */
+  --height1: 1vh;
+}
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: "PT Mono", monospace;
+  color: var(--main_color, black);
+  background-color: var(--background_color, #f0f0f0);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100%;
+}
+.nav_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  border-radius: 0px 50px 50px 0px;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: var(--nav_back, #333);
+}
+.nav_button {
+  border-color: inherit;
+  background-color: inherit;
+  color: white;
+  font-size: 1.5rem;
+  height: 5rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav_button:focus,
+.button_pressed {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  font-size: 1.3rem;
+  transition: 500ms;
+  color: var(--button_clicked_color, white);
+  text-shadow: 0px 0px 10px var(--button_clicked_color, white);
+  outline: none;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary_background_color, #191919);
+}
+.main_section {
+  margin-right: 1rem;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 20vw;
+}
+.section_content {
+  height: calc(var(--height1, 1vh) * 100);
+  border-radius: 0px 22% 22% 0px;
+  background-color: var(--background_color, #f0f0f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+.about {
+  font-size: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  overflow: auto;
+}
+.about {
+  scrollbar-color: #555 #f5f5f5;
+  scrollbar-width: thin;
+}
+
+.about::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.about::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 12px;
+  background-color: transparent;
+}
+
+.about::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+.about::-webkit-scrollbar-button {
+  height: 50px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic {
+  width: 100%;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.blog,
+.portfolio,
+.contact {
+  display: none;
+}
+
+#hi {
+  align-self: flex-start;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1444px) {
+  .nav_button {
+    font-size: 1.2rem;
+  }
+  .nav_button:focus,
+  .button_pressed {
+    font-size: 1.1rem;
+  }
+  .main_section {
+    margin-right: 0.7rem;
+  }
+}
+@media (max-width: 1080px) {
+  .nav_button {
+    height: 4rem;
+  }
+  .nav {
+    height: 70%;
+  }
+}
+@media (max-width: 960px) {
+  .nav_button {
+    height: 3rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+  }
+  .nav {
+    height: 50%;
+  }
+  .main_section {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+  }
+  .nav_button {
+    height: 4rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 1rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+    height: calc(var(--height1, 1vh) * 100);
+    width: 100vw;
+  }
+
+  .nav_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--secondary_background_color, #191919);
+  }
+  .nav {
+    padding: 1rem;
+    height: auto;
+    flex-direction: row;
+    width: 80%;
+    border-radius: 0px 0px 50px 50px;
+    background-color: var(--nav_back, #333);
+  }
+  .content {
+    display: flex;
+    width: 100vw;
+    height: calc(var(--height100, 1vh) * 85);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary_background_color, #191919);
+  }
+  .main_section {
+    height: 100%;
+    margin-right: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(var(--height100, 1vh) * 20) auto;
+  }
+  .image {
+    grid-row: 1;
+    margin-bottom: 1rem;
+  }
+  .pic {
+    border-radius: 0px 0px 50px 50px;
+    width: auto;
+    height: 100%;
+  }
+  .section_content {
+    height: auto;
+    border-radius: 22% 22% 0px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .nav {
+    width: 100%;
+    border-radius: 0px;
+    padding-left: 0.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 10rem;
+  }
+  .container {
+    display: grid;
+    grid-template-rows: 70% 30%;
+  }
+  .content {
+    grid-row: 1;
+  }
+  .nav_container {
+    align-items: flex-end;
+    background-color: var(--background_color, #f0f0f0);
+  }
+  .nav {
+    width: 100vw;
+    border-radius: 50px 50px 0px 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-content: end;
+    padding: 1rem 0px 0px 0px;
+    z-index: 5;
+  }
+  .nav_button {
+    font-size: 1.1rem;
+    height: 2rem;
+    margin: 0.5rem auto;
+    width: 90%;
+    height: 3rem;
+    padding: auto 0px;
+  }
+  .nav_button:focus,
+  .button_pressed {
+    font-size: 1rem;
+  }
+  #hi {
+    padding-top: 20rem;
+  }
+}
+@media (max-width: 450px) {
+  .about {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-height: 767px) and (orientation: landscape) {
+  .nav {
+    height: 80%;
+    padding-right: 0.3rem;
+  }
+  #hi {
+    padding-top: 15rem;
+  }
+  #sec-one-content:last-child {
+    padding-bottom: 2rem;
+  }
+
+  /* using below style to reset vh because its not working properly in landscape mode */
+  .section_content { 
+    height: 100vh;
+  }
+}
