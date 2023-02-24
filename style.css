@@ -161,6 +161,7 @@ html {
 a {
   color: #191919;
   margin: 0.2rem;
+  text-decoration: none;
 }
 .portfolio {
   overflow-y: auto;
