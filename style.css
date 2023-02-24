@@ -158,11 +158,66 @@ html {
   align-items: center;
 }
 
-.contact-links > a {
+a {
   color: #191919;
   margin: 0.2rem;
 }
+.portfolio {
+  overflow-y: auto;
+  scrollbar-color: #555 #f5f5f5;
+  scrollbar-width: thin;
+}
+.portfolio::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.portfolio::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 12px;
+  background-color: transparent;
+}
+
+.portfolio::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+.portfolio::-webkit-scrollbar-button {
+  height: 50px;
+}
+.portfolio-content {
+  align-self: flex-start;
+  justify-self: center;
+  margin-top: 2rem;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-pic {
+  width: 400px;
+  height: auto;
+  margin: 0.5rem;
+  border: 1px solid #191919;
+}
+.portfolio-item:hover {
+  scale: 1.2;
+  background-color: #ee8787;
+  padding: 3px;
+  border-radius: 5px;
+}
 @media (max-width: 1444px) {
+  .portfolio-grid {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
   .nav_button {
     font-size: 1.2rem;
   }
@@ -197,6 +252,9 @@ html {
   }
 }
 @media (max-width: 767px) {
+  .portfolio-content {
+    margin-top: 0.2rem;
+  }
   .about {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -315,6 +373,9 @@ html {
   .about {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .portfolio-pic {
+    width: 300px;
   }
 }
 @media screen and (max-height: 767px) and (orientation: landscape) {
