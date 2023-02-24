@@ -148,6 +148,20 @@ html {
   font-size: 2.5rem;
 }
 
+.contact-head {
+  margin-bottom: 1.4rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-links > a {
+  color: #191919;
+  margin: 0.2rem;
+}
 @media (max-width: 1444px) {
   .nav_button {
     font-size: 1.2rem;
@@ -186,7 +200,6 @@ html {
   .about {
     padding-left: 3rem;
     padding-right: 3rem;
-
   }
   .nav_button {
     height: 4rem;
@@ -317,7 +330,7 @@ html {
   }
 
   /* using below style to reset vh because its not working properly in landscape mode */
-  .section_content { 
+  .section_content {
     height: 100vh;
   }
 }
