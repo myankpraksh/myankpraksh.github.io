@@ -369,6 +369,9 @@ a {
   #hi {
     padding-top: 20rem;
   }
+  .portfolio{
+    padding-bottom: 100px;
+  }
 }
 @media (max-width: 450px) {
   .about {
